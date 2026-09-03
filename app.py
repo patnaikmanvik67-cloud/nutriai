@@ -5,7 +5,7 @@ import joblib
 
 app = Flask(__name__)
 
-pipeline = joblib.load("nutriai_model.pkl")
+pipeline = joblib.load("nutriai_model_tiny.pkl")
 
 
 @app.route("/")
