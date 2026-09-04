@@ -13,10 +13,10 @@ def home():
     return "NutriAI server is running!"
 
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET"])
 def predict():
     try:
-        data = request.get_json()
+        data = request.args
 
         age = int(data["Age"])
         cls = int(data["Class"])
